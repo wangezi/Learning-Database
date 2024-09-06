@@ -1,4 +1,4 @@
-# Basic Synatax(基本語法)
+# Basic Synatax(基本語法){#basic}
 Create sophisticated[^1] formatting[^2] for your prose[^3] and code on Github with simple syntax.
 ## Headings(標題)
 To create a heading, add one to six `#` symbols[^4] before your heading text. The number of `#` you use will determine[^5] the hierarchy[^6] level and typeface[^7] size of the heading.
@@ -103,7 +103,20 @@ To create a horizontal rule, use three or more asterisks (***)[^9], dashes (---)
 *** 
 ---
 
+## Links(連結)
 
+```HTML
+Welcome to my [Github](https://github.com/wangezi)
+Welcome to my <a href="https://github.com/wangezi">Github</a>
+```
+Welcome to my [Github](https://github.com/wangezi).
+
+## Linking to Heading IDs(連結到標題ID)
+```HTML
+[Basic Synatax](#basic-synatax)
+<a href="#basic-synatax">Basic Synatax</a>
+```
+[Basic Synatax](#basic)
 
 [^1]:複雜的。
 [^2]:格式化。
