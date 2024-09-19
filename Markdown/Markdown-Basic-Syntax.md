@@ -1,4 +1,4 @@
-# Basic Synatax(基本語法)
+# Basic Synatax {#top}(基本語法)
 Create sophisticated[^1] formatting[^2] for your prose[^3] and code on Github with simple syntax.
 ## Headings(標題)
 To create a heading, add one to six `#` symbols[^4] before your heading text. The number of `#` you use will determine[^5] the hierarchy[^6] level and typeface[^7] size of the heading.
@@ -111,11 +111,41 @@ Welcome to my <a href="https://github.com/wangezi">Github</a>
 ```
 Welcome to my [Github](https://github.com/wangezi).
 
+## Images(圖片)
+
+![Cute Panda!](/Markdown/MDimg/panda.jpg "Panda")
+
+```HTML
+![images text](url)"alt"
+<img src="" alt="">
+```
+
+## Heading ID (標題ID)
+
+Adding custom[^11] IDs allows you to link directly[^12] to headings and modify[^13] them with CSS. 
+
+```HTML
+## Heading IDS{# custom-id}
+<h2 id="custom-id">Heading IDS</h2>
+```
+
 ## Linking to Heading IDs(連結到標題ID)
+
+[Go to top](#top)
+
 ```HTML
 [Basic Synatax](#basic-synatax)
 <a href="#basic-synatax">Basic Synatax</a>
 ```
+
+
+
+
+
+
+
+
+
 
 
 [^1]:複雜的。
@@ -128,3 +158,6 @@ Welcome to my [Github](https://github.com/wangezi).
 [^8]:反引號。
 [^9]:星號。
 [^10]:破折號。
+[^11]:自訂。
+[^12]:直接的。
+[^13]:改動。
