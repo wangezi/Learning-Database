@@ -1,4 +1,4 @@
-# Basic Synatax {#top}(基本語法)
+# Basic Synatax(基本語法)
 Create sophisticated[^1] formatting[^2] for your prose[^3] and code on Github with simple syntax.
 ## Headings(標題)
 To create a heading, add one to six `#` symbols[^4] before your heading text. The number of `#` you use will determine[^5] the hierarchy[^6] level and typeface[^7] size of the heading.
@@ -131,21 +131,44 @@ Adding custom[^11] IDs allows you to link directly[^12] to headings and modify[^
 
 ## Linking to Heading IDs(連結到標題ID)
 
-[Go to top](#top)
+[Go to top](#)
 
 ```HTML
 [Basic Synatax](#basic-synatax)
 <a href="#basic-synatax">Basic Synatax</a>
 ```
 
+## Strikethrough(刪除線)
 
+~~Strikethrough~~
+```
+~~text~~
+```
 
+## Task Lists(任務清單)
 
+- [x] Monday
+- [ ] Tuesday
+- [x] Wednesday
+- [ ] Thursday
+- [x] Friday
+- [ ] Saturday
+- [x] Sunday
 
+```
+- [x] Lists Text()
+- [] Lists Text
+        .
+        .
+        .
+        .
+        .
+```
+Copying and Pasting Emoji[^14]
 
+Can simply copy an emoji from a source[^15] like [Emojipedia](https://emojipedia.org/) and paste it into your document[^16].
 
-
-
+💀 👻 👽 🐼 🐉 🦈
 
 
 [^1]:複雜的。
@@ -161,3 +184,6 @@ Adding custom[^11] IDs allows you to link directly[^12] to headings and modify[^
 [^11]:自訂。
 [^12]:直接的。
 [^13]:改動。
+[^14]:表情符號。
+[^15]:來源。
+[^16]:文件。
