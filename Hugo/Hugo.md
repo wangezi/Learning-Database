@@ -42,3 +42,6 @@ Hugo 安裝檔下載位置 : [GitHub Releases](https://github.com/gohugoio/hugo/
 我們打開命令提示字元輸入以下這條指令:
 
 ` hugo version `
+
+如果有出現以下顯示版本的畫面，就代表你成功安裝好 Hugo 了！！！
+![Success download](/Hugo/Hugoimg/hugo_cmd.jpg)
