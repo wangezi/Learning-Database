@@ -3,7 +3,7 @@ Create sophisticated[^1] formatting[^2] for your prose[^3] and code on Github wi
 ## Headings(標題)
 To create a heading, add one to six `#` symbols[^4] before your heading text. The number of `#` you use will determine[^5] the hierarchy[^6] level and typeface[^7] size of the heading.
 
-![title](/Markdown/MDimg/Heading%20level.png)
+![title](/Markdown/MDimg/Heading%20level.png "Headings")
 
 ``` HTML
 # H1 -> <h1>Heading level 1</h1>
@@ -113,7 +113,7 @@ Welcome to my [Github](https://github.com/wangezi).
 
 ## Images(圖片)
 
-![Cute Panda!](/Markdown/MDimg/panda.jpg "Panda")
+![Cute Panda!](/Markdown/MDimg/panda.jpg "Cute Panda")
 
 ```HTML
 ![images text](url)"alt"
