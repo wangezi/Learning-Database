@@ -14,3 +14,4 @@ XAMPP 是一個整合的環境，把 Apache 網頁伺服器、PHP、Perl程式�
 
 Download URL : [https://www.apachefriends.org/zh_tw/index.html](https://www.apachefriends.org/zh_tw/index.html)
 
+[**XAMPP** Windows 安裝流程和使用教學](/XAMPP/download.md)
