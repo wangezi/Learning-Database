@@ -81,6 +81,23 @@ This text is ***really important***.
 - Third item
 - Fourth item
 
+## Table(表格)
+
+``` 
+| Name | Age | Number |
+| ---- | --- | ------ |
+| Boy  | 18  | 123    |
+| Girl | 18  | 456    |
+| Dog  | 10  | 789    |
+```
+| Name | Age | Number |
+| :--- | :--:| -----: |
+| Boy  | 18  | 123    |
+| Girl | 18  | 456    |
+| Dog  | 10  | 789    |
+
+You can align text in a column to the left, right, or center by adding a colon (:) to the left, right, or both sides of the hyphen in the header row.
+
 ## Fenced Code Blocks (圍欄代碼區塊)
 
 you’ll use three backticks (```)[^8] on the lines before and after the code block.
