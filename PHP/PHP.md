@@ -142,7 +142,7 @@ unset($a["os"]); // 刪除 "Linux"
 ?>
 ```
 
-輸出集合
+#### 輸出集合
 
 ```php
 <?php
@@ -173,3 +173,125 @@ print_r($files);
 ?>
 ```
 - - -
+### Iterable (可疊代對象)
+
+接受任何 Array 或實現 Traversable (可遍歷) 接口的對象。  
+這些類型都能用 foreach 疊代，也可以和 生成器 裡的 yield form 一起使用。
+
+```php
+<?php
+function gen(): iterable { // 建立一個可以疊代生成器
+yield 1;
+yield 2;
+yield 3;
+};
+
+$iterable = gen() // 實例化
+foreach($iterable as $value){
+    echo "$value\n" // \n -> 代表換行。
+}
+// 輸出
+// 1
+// 2
+// 3
+
+// 答案相同
+function gen(): iterable{
+    return [1, 2, 3];
+}
+$iterable = gen();
+foreach($iterable as $value){
+    echo "$values\n";
+}
+
+?>
+```
+- - -
+
+### Object (物件)
+
+要創建新的 Object， 使用 new 語句
+
+```php
+<?php
+class SayHi{
+    function do_sayhi(){
+        echo "Hello!!";
+    }
+}
+
+$bar = new $foo;
+$bar -> do_sayhi(); // Hello!!
+?>
+```
+如果將 Object 轉換成 Object 將不會有任何變化，如果其他類型的值被轉換成 Object， 將會創建一個內置類 stdClass 的實例。  
+如果該值為 null， 則新的值為空。  
+Array 轉換成 Object 將使 key 值成為屬性名並具有相對應的值，參考以下範例:
+
+```php
+<?php
+$obj = (object) array('1' => 'foo');
+var_dump(isset($obj -> {'1'})); // bool(ture)
+var_dump(key($obj)); // string(1) "1"
+?>
+```
+
+對於其他值，會包含進成員遍量名 scalar。
+
+```php
+<?php
+$obj = (object) 'hello';
+echo $obj -> scalar; // outputs 'hello'
+?>
+```
+- - -
+
+### Null (類型)
+
+特殊的 null 值表示一個變數沒有值。  
+NULL 類型唯一可能的值就是 null。  
+
+在下列情況下變數被認為是 null :  
+- 被賦值為 null。
+- 尚未被賦值。
+- 被 unset()。
+
+Null 類型只有一個值，就是不區分大小寫的常量 null。
+
+```php
+<?php
+$var = NULL;
+?>
+```
+- - -
+
+### PHP 變數命名規則
+
+PHP 中的變數用一個 $ 跟 變數名稱連表示。 變數名是區分大小寫的。
+
+變數名與 PHP 中其他的標籤一樣遵循相同規則。有效的變量名由字或者 _ (底線)開頭，後面追加上任意數量的字母、數字或者底線。  
+ > $this 是一個特殊變數，他不能被賦值。
+
+```php
+<?php
+$firstName = "Wang";
+$lastName = "Yin";
+echo "$firstName, $lastName"; // 輸出 "Wang, Yin"
+
+$4site = "not yet"; // 非法變數名; 以數字開頭
+$_4site = "not yet"; // 合法變數名; 以點線開頭
+?>
+```
+- - -
+
+### PHP 常量
+
+可以使用 const 關鍵字或 define() 函數兩種方法來定義常量。  
+函數 define() 允許將常量定義為一個表達式，而 const 關鍵字有一些限制。  
+常量一旦被定義，就不能再改變或者取消定義。
+
+使用 const 關鍵字定義常量時，只能包含標量數據( bool、int、float、string)。  
+可以將常量定義為一個表達式，也可以定義為 Array。
+可以簡單的通過指定期名字來取得常量的值，與變量不同，不應該再常量面前加上 $。  
+如果常量名是動態的，也可以用函數 constant() 來獲取常量的值。  
+用 get_defined_constants() 可以獲得所有已定義的常量列表。
