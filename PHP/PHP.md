@@ -295,3 +295,79 @@ $_4site = "not yet"; // 合法變數名; 以點線開頭
 可以簡單的通過指定期名字來取得常量的值，與變量不同，不應該再常量面前加上 $。  
 如果常量名是動態的，也可以用函數 constant() 來獲取常量的值。  
 用 get_defined_constants() 可以獲得所有已定義的常量列表。
+
+以下為定義常量範例
+
+```php
+<?php
+define("CONSTANT","Hello world.");
+
+echo CONSTANT; // 輸出 "Hello world."
+echo Constant; // 拋出錯誤 : 未定義的常量 "Constant"
+?>
+```
+
+以下範例為使用關鍵字 const 定義常量
+
+```php
+<?php
+// 簡單的標量質
+const CONSTANT = "Hello world";
+
+echo CONSTANT;
+
+// 標量表達式
+const ANOTHER_CONST = CONSTANT."; Goodbye World";
+echo ANOTHER_CONST;
+
+const ANIMALS = array("dog","cat", "bird");
+echo ANIMALS[1]; // 將輸出 "cat"
+
+// 常量數組
+define("ANIMALS", array("dog","cat", "bird"));
+echo ANIMALS[2]; // 輸出 "bird"
+
+?>
+
+```
+#### 魔術常量
+
+|名字|說明|
+|:---|:---|
+|_ LINE _|文件中的當前行號|
+|_ FILE _|文件的完整路徑和文件名。 如果用在被包含的文件中，則返回被包含的文件名。
+|_ DIR _|文件所在的目錄。 如果用在被包括文件中，則返回被包括的文件所在目錄。 他等於 dirname(_ FILE _)。 除非是跟目錄，否則目錄中名不包括末尾的斜杠。
+|_ FUNCTON _|當前函數的名稱。 匿名函數則為 {closure}。
+|_ CLASS _|當前"類"的名稱。 類名包括齊備聲明的作用域 (例如 Foo / Bar)。 當用在 trait 方法中時，_ CLASS _ 是調用 trait 方法的類的名字。
+|_ TRAIT _|Trait 的名字。 Trait 名包括其被聲明的作用域 (例如 Foo / Bar)。
+|_ METHOD _|class 的方法名。
+|_ NAMESPACE _|當前命名空間名稱。
+|ClassName::class|完整的 class 名稱。
+
+以下為魔術常量範例:
+
+```php
+<?php
+namespace UserModel {
+    class User {
+        public function _construct(){
+            echo 'I am in '._CALSS_."\n";
+        }
+
+        public function showData(){
+            echo 'I am in '._METHOD_."\n";
+        }
+    }
+
+    $obj = new User;
+    $obj -> showData();
+    echo _NAMESPACE_;
+}
+?>
+
+// outputs
+// I am in UserModel/User
+// I am in UserModel/User::showData
+// UserModel
+
+```
