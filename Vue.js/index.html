@@ -10,11 +10,23 @@
 
 <body>
     <!-- Vue Render 有效區域 -->
+
     <div id="app">
+        <!-- 輸出 - 文字的綁定 -->
         {{ message}}
+
+        <!-- 迴圈 -->
+        <ul>
+            <!-- 使用 v-for 以迴圈的方式 render(呈現) 出來 -->
+            <!-- item 為迴圈每輪所指向的資料項目 -->
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./app.js"></script>
+
+
 </body>
 
 </html>

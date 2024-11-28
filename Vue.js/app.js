@@ -13,6 +13,25 @@ var app = new app({
 */
 
 // Vue.js 3.x
-var app = Vue.createApp(){
-    // 資料模型
-}
+// 輸出 - 文字的綁定
+var app = Vue.createApp({
+  // 資料模型 (Model)
+  data: function () {
+    return {
+      message: "Hello Ian!",
+      items: ["Dog", "Cat", "Bird"],
+    };
+  },
+});
+// Vue.js 渲染畫面的 HTML Element
+app.mount("#app");
+
+// // 迴圈
+// var app = Vue.createApp({
+//   data: function () {
+//     return {
+//       list: ["Dog", "Cat", "Bird"],
+//     };
+//   },
+// });
+// app.mount("#app");
