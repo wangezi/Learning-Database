@@ -44,7 +44,8 @@
         <div v-if="isIan">{{ messageOne }}</div>
 
         <!----------------------------------------------------->
-        <!-- JavaScript 表示式渲染 - 程式解析 -->
+
+        <!-- JavaScript 表示式渲染 -->
         <!-- 以 『三元表示式』 判斷 messageTwo 是否值相等於 "This is message."，相等時顯示為 "Yes"，反之則顯示 "No" -->
         取資料模型屬性進行判斷: {{ messageTwo === 'This is message.'?'Yes':'No'}}<br>
 
@@ -55,7 +56,49 @@
         數字運算: {{ counter + 10 }}<br>
 
         <!-- 使用 JavaScript 陣列的 join 語法，以『，』作為間隔符號合併 foods 陣列中的值 -->
-        陣列合併: {{ foods.join(', ') }}
+        陣列合併: {{ foods.join(', ') }}<br>
+
+        <!----------------------------------------------------->
+
+        <!-- 表單元件資料綁定 -->
+        <!-- 使用 v-bind 綁定至 value -->
+        <input type="text" v-bind:value="TextOne"><br>
+        <!-- 使用 v-bind 縮寫綁定至 value -->
+        <input type="text" :value="TextTwo">
+
+        <!----------------------------------------------------->
+
+        <!-- HTML Element 樣式資料綁定 -->
+        <!-- class 樣式 class 名稱綁定 -->
+        <div v-bind:class="className">
+            class 樣式 class 名稱綁定
+        </div>
+
+        <!-- style 樣式綁定 -->
+        <div v-bind:style="customStyle">
+            style 樣式綁定
+        </div>
+
+        <!----------------------------------------------------->
+
+        <!-- 圖片資料綁定 -->
+        圖檔相對位置資料綁定:<br>
+        <img v-bind:src="imagePath" alt="初音 ミク">
+
+        <!----------------------------------------------------->
+
+        <!-- 列表資料綁定 - v-for -->
+        <!-- Array 列表資料 -->
+        <!-- v-for="([陣列元素], [索引值]) in [陣列屬性名稱]" -->
+        <ul>
+            <li v-for="(item,index) in colors" v-bind:key="index">{{ item }}</li>
+        </ul>
+
+        <!-- Object 列表資料 -->
+        <!-- v-for="([屬性質], [屬性名稱], [索引值]) in [陣列屬性名稱]" -->
+        <ul>
+            <li v-for="(value, propertyName, index) in school" v-bind:key="index">{{ propertyName }} - {{ value }}</li>
+        </ul>
 
     </div>
 

@@ -26,6 +26,23 @@ var app = Vue.createApp({
       messageTwo: "This is message.",
       counter: 20,
       foods: ["rice", "apple", "orange", "cake", "kiwi"],
+      TextOne: "使用 v-bind 綁定至 value", //使用 v-bind 綁定至 value
+      TextTwo: "使用 v-bind 縮寫綁定至 value", //使用 v-bind 縮寫綁定至 value
+      className: "test-style-class", //class 樣式 class 名稱綁定
+      customStyle: {
+        width: "200px",
+        margin: "5px",
+        padding: "5px 10px",
+        color: "#FEFEFE",
+        background: "#666",
+        "text-align": "center",
+      },
+      imagePath: "./img/indexPic.jpg",
+      colors: ["green", "yellow", "red"], //顏色列表陣列
+      school: {
+        fifth_grade: 185,
+        sixth_grade: 132,
+      },
     };
   },
 
