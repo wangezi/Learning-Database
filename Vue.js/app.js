@@ -21,8 +21,11 @@ var app = Vue.createApp({
       message: "Hello Ian!", // 輸出 - 文字的綁定
       list: ["Dog", "Cat", "Bird"], // 迴圈
       Ian: "I'm Ian", //輸入-表單變數資料雙向綁定
-      isIan: ture, // 條件式
-      message01: "Hi!!",
+      isIan: true, // 條件式
+      messageOne: "Hi!!",
+      messageTwo: "This is message.",
+      counter: 20,
+      foods: ["rice", "apple", "orange", "cake", "kiwi"],
     };
   },
 
@@ -65,5 +68,6 @@ var app = Vue.createApp({
     // 資料更新後，完成畫面渲染時，執行的程序
   },
 });
+
 // Vue.js 渲染畫面的 HTML Element
 app.mount("#app");

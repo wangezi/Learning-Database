@@ -41,8 +41,21 @@
 
         <!-- 條件式 -->
         <!-- 如 isIan 的質為 true 時，將顯示此 div 標籤 -->
-        <div v-if="isIan">{{message01}}</div>
+        <div v-if="isIan">{{ messageOne }}</div>
 
+        <!----------------------------------------------------->
+        <!-- JavaScript 表示式渲染 - 程式解析 -->
+        <!-- 以 『三元表示式』 判斷 messageTwo 是否值相等於 "This is message."，相等時顯示為 "Yes"，反之則顯示 "No" -->
+        取資料模型屬性進行判斷: {{ messageTwo === 'This is message.'?'Yes':'No'}}<br>
+
+        <!-- 以 『文字相加』的方式將 messageTwo 屬性後加上 "(Add Text)" 字串 -->
+        文字相加: {{ messageTwo + '(Add Text)' }}<br>
+
+        <!-- 以 『數字相加』的方式渲染 counter 加 10 的結果 -->
+        數字運算: {{ counter + 10 }}<br>
+
+        <!-- 使用 JavaScript 陣列的 join 語法，以『，』作為間隔符號合併 foods 陣列中的值 -->
+        陣列合併: {{ foods.join(', ') }}
 
     </div>
 
