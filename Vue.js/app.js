@@ -43,6 +43,12 @@ var app = Vue.createApp({
         fifth_grade: 185,
         sixth_grade: 132,
       },
+      slideList:{  // 輪播圖片相對位置清單
+        "./img/slide-01.jpg",
+        "./img/slide-02.jpg",
+        "./img/slide-03.jpg",
+        "./img/slide-04.jpg",
+      },
     };
   },
 
