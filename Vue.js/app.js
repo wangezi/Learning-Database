@@ -37,19 +37,87 @@ var app = Vue.createApp({
         background: "#666",
         "text-align": "center",
       },
+
+      //顏色列表陣列
       imagePath: "./img/indexPic.jpg",
-      colors: ["green", "yellow", "red"], //顏色列表陣列
+      colors: ["green", "yellow", "red"],
       school: {
         fifth_grade: 185,
         sixth_grade: 132,
       },
-      slideList:{  // 輪播圖片相對位置清單
+
+      // v-for 輪播圖片相對位置清單
+      slideList: [
         "./img/slide-01.jpg",
         "./img/slide-02.jpg",
         "./img/slide-03.jpg",
         "./img/slide-04.jpg",
+      ],
+
+      //v-show
+      imageListOne: [
+        {
+          name: "狗狗嚕",
+          path: "./img/cutedog.jpg",
+          is_cat: false,
+        },
+        {
+          name: "游泳小貓",
+          path: "./img/cat-01.jpg",
+          is_cat: true,
+        },
+        {
+          name: "海邊小貓",
+          path: "./img/cat-02.jpg",
+          is_cat: true,
+        },
+      ],
+
+      //v-if
+      imageListTwo: [
+        {
+          name: "狗狗嚕",
+          path: "./img/cutedog.jpg",
+          is_cat: false,
+          is_swimming_cat: false,
+        },
+        {
+          name: "游泳小貓",
+          path: "./img/cat-01.jpg",
+          is_cat: true,
+          is_swimming_cat: true,
+        },
+        {
+          name: "海邊小貓",
+          path: "./img/cat-02.jpg",
+          is_cat: true,
+          is_swimming_cat: false,
+        },
+      ],
+
+      // $el 與 $refs 操作 (this)
+      el: {
+        width: "N/A",
+        height: "N/A",
+      },
+      ref: {
+        width: "N/A",
+        height: "N/A",
       },
     };
+  },
+  //當元件掛載完成時 $el 與 $refs 操作 (this)
+  mounted() {
+    // $el 裡的文字顏色改為 #aquamarine
+    this.el.parentElement.style.color = "#aquamarine";
+    // 取得 $el 的寬/高
+    this.el.width = this.$el.parentElement.clientWidth || "N/A";
+    this.el.height = this.$el.parentElement.clientHeight || "N/A";
+    // $refs["ref-example"] 裡的文字顏色改為 #chartreuse
+    this.$refs["ref-example"].style.color = "#chartreuse";
+    // 取得 $refs["ref-example"] 的寬/高
+    this.ref.width = this.$refs["ref-example"].clientWidth || "N/A";
+    this.ref.height = this.$refs["ref-example"].clientHeight || "N/A";
   },
 
   // 事件
