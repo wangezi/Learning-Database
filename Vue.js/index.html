@@ -177,14 +177,15 @@
 
         <!----------------------------------------------------->
         <!-- $el 與 $refs 操作 (this) -->
-
-        這裡是 $el 範圍內<br>
-        寬度: {{ el.width }}<br>
-        高度: {{ el.height }}<br>
-        <div ref="ref-example" class="ref-example">
-            這裡是 $refs["ref-example"] 範圍內<br>
-            寬度: {{ ref.width }}<br>
-            高度: {{ ref.height }}
+        <div style="width: 600px; height: 200px; color: aquamarine;">
+            這裡是 $el 範圍內<br>
+            寬度: {{ el.width }}<br>
+            高度: {{ el.height }}<br>
+            <div ref="ref-example" class="ref-example">
+                這裡是 $refs["ref-example"] 範圍內<br>
+                寬度: {{ ref.width }}<br>
+                高度: {{ ref.height }}
+            </div>
         </div>
 
         <!----------------------------------------------------->
@@ -194,7 +195,7 @@
 
 
     <!-- Vue 3 CDN -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.min.js"></script>
 
     <!-- Bootstrap JS/ JQuery JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
