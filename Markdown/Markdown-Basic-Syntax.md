@@ -130,11 +130,22 @@ Welcome to my [Github](https://github.com/wangezi).
 
 ## Images(圖片)
 
-![Cute Panda!](/Markdown/MDimg/panda.jpg "Cute Panda")
+![Cute Panda!](/Markdown/MDimg/panda02.jpg "Cute Panda")
 
 ```HTML
 ![images text](url)"alt"
 <img src="" alt="">
+```
+
+## Image Link(圖片連結)
+
+[![Cute Panda!](/Markdown/MDimg/panda.jpg "Cute Panda")](/Markdown/Markdown-Basic-Syntax.md)
+
+```HTML
+[![images text](url)"alt"](URL)
+
+<a href=""><img src="" alt=""></a>
+
 ```
 
 ## Heading ID (標題ID)

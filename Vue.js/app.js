@@ -108,18 +108,14 @@ var app = Vue.createApp({
   },
   //當元件掛載完成時 $el 與 $refs 操作 (this)
   mounted() {
-    // $el 裡的文字顏色改為 #aquamarine
-    // this.el.parentElement.style.color = "#666";
-
-    // 取得 $el 的寬/高
-    this.el.width = this.$el.parentElement.clientWidth || "N/A";
-    this.el.height = this.$el.parentElement.clientHeight || "N/A";
-    // $refs["ref-example"] 裡的文字顏色改為 #chartreuse
+    console.log(this.$el);
+    this.el.width = this.$el.clientWidth || "N/A";
+    this.el.height = this.$el.clientHeight || "N/A";
+    // $refs['ref-example'] 裡的文字顏色改為 #999
     this.$refs["ref-example"].style.color = "#999";
-    // 取得 $refs["ref-example"] 的寬/高
+    // 取得 $refs['ref-example'] 的寬/高
     this.ref.width = this.$refs["ref-example"].clientWidth || "N/A";
     this.ref.height = this.$refs["ref-example"].clientHeight || "N/A";
-    console.log(this.el.height);
   },
 
   // 事件
