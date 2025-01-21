@@ -17,3 +17,6 @@ If we understand search engines as(作為) tools for people to solve(解決) the
 ## Search Engine Optimization 搜尋引擎優化
 
 *Based on the above*(基於上述), search engine optimization *refers to the way*(指的是) that each brand(品牌) strives(爭取) for a "search results page" ranking(排名) position on the "search engine" through a website structure(結構) that is easier(更輕鬆) to read by Google and content that meets(滿足) the "search intent". Internet marketing tips!
+
+
+![interactive process](/SEO/img/interactive_process.jpg "interactive process")
