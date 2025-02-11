@@ -56,3 +56,27 @@ MVC 架構的優缺點如下 :
 > - 效能降低 : 由於 MVC 的職責區分，原本能直接串接資料庫，變成需透過 Model 的程式進行連結，程式變得肥大，導致效能降低。
 > - 容易關聯複雜 : Web 應用程式在 MVC 架構下開發的越來越大時，沒有合適的規劃，會導致系統中各元件關聯及複雜度增加，導致修復或追蹤問題時會變得更不容易。
 
+## **1-2-2** Flux - 單向資料流
+
+![MVC框架問題](/Vue.js/img/Framing%20problem.png "MVC框架問題")
+
+雖然不是所有 MVC 的實作都如上圖般，因為雙向資料流而容易產生不好維護的問題。然而，Flux 更明確的定義了單向資料流中各角色職責及互動方式，提高了可維護性，讓 Facebook 最後選擇了它。
+
+最後，你需要知道 Flux 是一個單向資料流的設計概念，並不是一個程式庫，因此它有非常多種的實作方式。如果把資料流想像成一齣劇，我們接下來就來探討在 Flux 這齣劇中，每位卡司負責的職責和整個劇本的編排。
+
+![Flux - 單向資料流](/Vue.js/img/Flux.png "Flux - 單向資料流")
+
+Flux 具有 **Action**、**View**、**Dispatcher**、**Store** 4個部分，以下將詳細介紹:
+
+> ### **Action**  
+> Action 定義使用者於介面上操作動作的內容及相關的資料。
+> ### **View**
+> View 的職責在於使用者介面及介面中監聽的各項操作。
+> ### **Dispatcher**
+> Dispatcher 為 Flux 架構中事件的系統，讓 Store 註冊 callback 及廣播事件，並接收 Action 來的資料。
+> ### **Store**
+> Store 是唯一可以操作資料與儲存資料的地方，向 Dispatcher 註冊 callback，並接收由 Dispatcher 監聽觸發的事件，進行資料的更新。  
+
+>## **參考文獻**  
+>[Flux 角色詳解](https://speakerdeck.com/shiningjason1989/flux-jiao-se-xiang-jie)、
+>[Flux 流程詳解](https://speakerdeck.com/shiningjason1989/flux-liu-cheng-xiang-jie)
